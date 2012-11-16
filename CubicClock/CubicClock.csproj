@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="View\CubicControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CubicControl.Designer.cs">
+      <DependentUpon>CubicControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CubicClockForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,9 @@
     <Compile Include="Presenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\CubicControl.resx">
+      <DependentUpon>CubicControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CubicClockForm.resx">
       <DependentUpon>CubicClockForm.cs</DependentUpon>
     </EmbeddedResource>
