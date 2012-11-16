@@ -1,20 +1,25 @@
-﻿using System.Drawing;
+﻿using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CubicClock.View
 {
     public partial class CubicControl : UserControl
     {
-        private int _value;
+        private float _value;
 
         public CubicControl()
         {
+            Max = 60;
+            Value = 33;
             InitializeComponent();
         }
 
-        public int Max { get; set; }
+        [DefaultValue(60)]
+        public float Max { get; set; }
 
-        public int Value
+        [DefaultValue(33)]
+        public float Value
         {
             get { return _value; }
             set

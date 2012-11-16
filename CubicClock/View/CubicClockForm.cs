@@ -4,6 +4,8 @@ namespace CubicClock.View
 {
     public partial class CubicClockForm : Form, IView
     {
+        private Presenter _presenter;
+
         public CubicClockForm()
         {
             InitializeComponent();
@@ -11,19 +13,17 @@ namespace CubicClock.View
 
         public Presenter Presenter
         {
-            set { throw new System.NotImplementedException(); }
+            set { _presenter = value; }
         }
 
         public int Hour
         {
-            get { throw new System.NotImplementedException(); }
-            set { throw new System.NotImplementedException(); }
+            set { _hourCubic.Value = value; ; }
         }
 
         public int Minute
         {
-            get { throw new System.NotImplementedException(); }
-            set { throw new System.NotImplementedException(); }
+            set { _minuteCubic.Value = value; }
         }
     }
 }

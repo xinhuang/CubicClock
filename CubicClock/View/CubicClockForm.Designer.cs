@@ -28,21 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this._minuteCubic = new CubicClock.View.CubicControl();
+            this._hourCubic = new CubicClock.View.CubicControl();
             this.SuspendLayout();
             // 
-            // Form1
+            // _minuteCubic
+            // 
+            this._minuteCubic.BackColor = System.Drawing.Color.LightGray;
+            this._minuteCubic.Location = new System.Drawing.Point(12, 108);
+            this._minuteCubic.Max = 60F;
+            this._minuteCubic.Name = "_minuteCubic";
+            this._minuteCubic.Size = new System.Drawing.Size(183, 45);
+            this._minuteCubic.TabIndex = 1;
+            this._minuteCubic.Value = 33F;
+            // 
+            // _hourCubic
+            // 
+            this._hourCubic.BackColor = System.Drawing.Color.LightGray;
+            this._hourCubic.Location = new System.Drawing.Point(12, 32);
+            this._hourCubic.Max = 60F;
+            this._hourCubic.Name = "_hourCubic";
+            this._hourCubic.Size = new System.Drawing.Size(183, 45);
+            this._hourCubic.TabIndex = 0;
+            this._hourCubic.Value = 33F;
+            // 
+            // CubicClockForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this._minuteCubic);
+            this.Controls.Add(this._hourCubic);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "CubicClockForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private CubicControl _hourCubic;
+        private CubicControl _minuteCubic;
+
     }
 }
 

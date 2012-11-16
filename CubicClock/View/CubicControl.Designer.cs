@@ -30,10 +30,11 @@
         {
             this.SuspendLayout();
             // 
-            // Cubic
+            // CubicControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.Name = "CubicControl";
             this.Size = new System.Drawing.Size(130, 69);
             this.ResumeLayout(false);
