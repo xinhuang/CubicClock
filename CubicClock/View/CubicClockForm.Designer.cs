@@ -37,31 +37,31 @@
             // 
             this._minuteCubic.BackColor = System.Drawing.Color.LightGray;
             this._minuteCubic.Location = new System.Drawing.Point(12, 83);
-            this._minuteCubic.Max = 60F;
+            this._minuteCubic.Max = 60;
             this._minuteCubic.Name = "_minuteCubic";
             this._minuteCubic.Size = new System.Drawing.Size(183, 45);
             this._minuteCubic.TabIndex = 1;
-            this._minuteCubic.Value = 33F;
+            this._minuteCubic.Value = 33;
             // 
             // _hourCubic
             // 
             this._hourCubic.BackColor = System.Drawing.Color.LightGray;
             this._hourCubic.Location = new System.Drawing.Point(12, 32);
-            this._hourCubic.Max = 60F;
+            this._hourCubic.Max = 60;
             this._hourCubic.Name = "_hourCubic";
             this._hourCubic.Size = new System.Drawing.Size(183, 45);
             this._hourCubic.TabIndex = 0;
-            this._hourCubic.Value = 33F;
+            this._hourCubic.Value = 33;
             // 
             // _secondCubic
             // 
             this._secondCubic.BackColor = System.Drawing.Color.LightGray;
             this._secondCubic.Location = new System.Drawing.Point(12, 134);
-            this._secondCubic.Max = 60F;
+            this._secondCubic.Max = 60;
             this._secondCubic.Name = "_secondCubic";
             this._secondCubic.Size = new System.Drawing.Size(183, 45);
             this._secondCubic.TabIndex = 2;
-            this._secondCubic.Value = 33F;
+            this._secondCubic.Value = 33;
             // 
             // CubicClockForm
             // 

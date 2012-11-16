@@ -24,6 +24,7 @@ namespace CubicClockTest
 
             _mockPresenter.VerifySet(o => o.Hour = It.IsAny<int>(), Times.Once());
             _mockPresenter.VerifySet(o => o.Minute = It.IsAny<int>(), Times.Once());
+            _mockPresenter.VerifySet(o => o.Second = It.IsAny<int>(), Times.Once());
         }
     }
 }

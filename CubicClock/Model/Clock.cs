@@ -16,11 +16,16 @@ namespace CubicClock.Model
         {
             _presenter.Hour = DateTime.Now.Hour;
             _presenter.Minute = DateTime.Now.Minute;
+            _presenter.Second = DateTime.Now.Second;
         }
 
         public void Start()
         {
-            new Thread(Update).Start();
+            new Thread(() =>
+                       {
+                           while (true)
+                               Update();
+                       }).Start();
         }
     }
 }

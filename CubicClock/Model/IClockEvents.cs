@@ -4,5 +4,6 @@ namespace CubicClock.Model
     {
         int Hour { set; }
         int Minute { set; }
+        int Second { set; }
     }
 }
