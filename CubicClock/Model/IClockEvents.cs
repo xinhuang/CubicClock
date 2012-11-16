@@ -1,4 +1,4 @@
-namespace CubicClock
+namespace CubicClock.Model
 {
     public interface IClockEvents
     {

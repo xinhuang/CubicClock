@@ -1,3 +1,6 @@
+using CubicClock.Model;
+using CubicClock.View;
+
 namespace CubicClock
 {
     public class Presenter : IViewEvents, IClockEvents
@@ -15,6 +18,11 @@ namespace CubicClock
         public int Hour
         {
             set { _view.Hour = value; }
+        }
+
+        public int Minute
+        {
+            set { _view.Minute = value; }
         }
 
         #endregion

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace CubicClock
+namespace CubicClock.View
 {
     public partial class CubicClockForm : Form
     {

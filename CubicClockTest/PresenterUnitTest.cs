@@ -1,4 +1,6 @@
 ﻿using CubicClock;
+using CubicClock.Model;
+using CubicClock.View;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
@@ -38,6 +40,14 @@ namespace CubicClockTest
             _presenter.Hour = 12;
 
             _mockView.VerifySet(o => o.Hour = 12, Times.Once());
+        }
+
+        [TestMethod]
+        public void given_update_minute_should_update_minute_in_view()
+        {
+            _presenter.Minute = 22;
+
+            _mockView.VerifySet(o => o.Minute = 22, Times.Once());
         }
     }
 }

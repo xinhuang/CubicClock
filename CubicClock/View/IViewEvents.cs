@@ -1,4 +1,4 @@
-namespace CubicClock
+namespace CubicClock.View
 {
     public interface IViewEvents
     {

@@ -1,4 +1,4 @@
-﻿namespace CubicClock
+﻿namespace CubicClock.View
 {
     partial class CubicClockForm
     {
