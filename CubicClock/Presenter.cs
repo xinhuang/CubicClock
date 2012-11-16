@@ -1,3 +1,4 @@
+using System;
 using CubicClock.Model;
 using CubicClock.View;
 
@@ -47,6 +48,11 @@ namespace CubicClock
             _view = view;
             _view.Presenter = this;
             _clock.Start();
+        }
+
+        public void OnExit()
+        {
+            Environment.Exit(0);
         }
     }
 }
