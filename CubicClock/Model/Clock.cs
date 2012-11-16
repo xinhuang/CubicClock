@@ -26,7 +26,10 @@ namespace CubicClock.Model
             new Thread(() =>
                        {
                            while (true)
+                           {
+                               Thread.Sleep(1000);
                                Update();
+                           }
                        }).Start();
         }
 
