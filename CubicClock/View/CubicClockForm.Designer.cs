@@ -87,6 +87,9 @@
             this._secondCubic.TabIndex = 2;
             this._secondCubic.TabStop = false;
             this._secondCubic.Value = 56;
+            this._secondCubic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnTimeCubicMouseDown);
+            this._secondCubic.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnTimeCubicMouseMove);
+            this._secondCubic.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnTimeCubicMouseUp);
             // 
             // _minuteCubic
             // 
@@ -99,6 +102,9 @@
             this._minuteCubic.TabIndex = 1;
             this._minuteCubic.TabStop = false;
             this._minuteCubic.Value = 38;
+            this._minuteCubic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnTimeCubicMouseDown);
+            this._minuteCubic.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnTimeCubicMouseMove);
+            this._minuteCubic.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnTimeCubicMouseUp);
             // 
             // _hourCubic
             // 
@@ -111,6 +117,9 @@
             this._hourCubic.TabIndex = 0;
             this._hourCubic.TabStop = false;
             this._hourCubic.Value = 10;
+            this._hourCubic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnTimeCubicMouseDown);
+            this._hourCubic.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnTimeCubicMouseMove);
+            this._hourCubic.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnTimeCubicMouseUp);
             // 
             // CubicClockForm
             // 

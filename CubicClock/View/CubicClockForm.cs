@@ -94,5 +94,20 @@ namespace CubicClock.View
             _presenter.OnTopMostCheckChanged(_topMostMenuItem.Checked);
             _menu.Visible = false;
         }
+
+        private void OnTimeCubicMouseDown(object sender, MouseEventArgs e)
+        {
+            OnMouseDown(e);
+        }
+        
+        private void OnTimeCubicMouseUp(object sender, MouseEventArgs e)
+        {
+            OnMouseUp(e);
+        }
+
+        private void OnTimeCubicMouseMove(object sender, MouseEventArgs e)
+        {
+            OnMouseMove(e);
+        }
     }
 }
