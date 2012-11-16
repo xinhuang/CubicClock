@@ -1,8 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using CubicClock.Model;
+﻿using CubicClock.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 

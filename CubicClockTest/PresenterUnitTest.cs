@@ -49,5 +49,13 @@ namespace CubicClockTest
 
             _mockView.VerifySet(o => o.Minute = 22, Times.Once());
         }
+
+        [TestMethod]
+        public void given_update_second_should_update_second_in_view()
+        {
+            _presenter.Second = 44;
+
+            _mockView.VerifySet(o => o.Second = 44, Times.Once());
+        }
     }
 }

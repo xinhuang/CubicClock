@@ -10,8 +10,6 @@ namespace CubicClock.View
 
         public CubicControl()
         {
-            Max = 60;
-            Value = 33;
             InitializeComponent();
         }
 

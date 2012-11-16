@@ -11,6 +11,7 @@ namespace CubicClock
         public Presenter(IClock clock)
         {
             _clock = clock;
+            _clock.Attach(this);
         }
 
         #region IClockEvents Members
@@ -23,6 +24,11 @@ namespace CubicClock
         public int Minute
         {
             set { _view.Minute = value; }
+        }
+
+        public int Second
+        {
+            set { _view.Second = value; }
         }
 
         #endregion
@@ -38,8 +44,8 @@ namespace CubicClock
 
         public void Attach(IView view)
         {
-            view.Presenter = this;
             _view = view;
+            _view.Presenter = this;
         }
     }
 }

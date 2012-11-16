@@ -13,7 +13,7 @@ namespace CubicClock.View
 
         public Presenter Presenter
         {
-            set { _presenter = value; }
+            set { _presenter = value; Refresh(); }
         }
 
         public int Hour
@@ -24,6 +24,17 @@ namespace CubicClock.View
         public int Minute
         {
             set { _minuteCubic.Value = value; }
+        }
+
+        public int Second
+        {
+            set { _secondCubic.Value = value; }
+        }
+
+        public override void Refresh()
+        {
+            _presenter.OnRefresh();
+            base.Refresh();
         }
     }
 }

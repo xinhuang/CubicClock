@@ -5,5 +5,6 @@ namespace CubicClock.View
         Presenter Presenter { set; }
         int Hour { set; }
         int Minute { set; }
+        int Second { set; }
     }
 }
