@@ -1,6 +1,6 @@
 namespace CubicClock
 {
-    public class Presenter
+    public class Presenter : IViewEvents, IClockEvents
     {
         private readonly IClock _clock;
         private IView _view;
@@ -10,20 +10,28 @@ namespace CubicClock
             _clock = clock;
         }
 
+        #region IClockEvents Members
+
         public int Hour
         {
             set { _view.Hour = value; }
         }
 
-        public void Attach(IView view)
-        {
-            view.Presenter = this;
-            _view = view;
-        }
+        #endregion
+
+        #region IViewEvents Members
 
         public void OnRefresh()
         {
             _clock.Update();
+        }
+
+        #endregion
+
+        public void Attach(IView view)
+        {
+            view.Presenter = this;
+            _view = view;
         }
     }
 }

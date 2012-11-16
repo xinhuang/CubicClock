@@ -46,18 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CubicClockForm.cs">
+    <Compile Include="View\CubicClockForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CubicClockForm.Designer.cs">
+    <Compile Include="View\CubicClockForm.Designer.cs">
       <DependentUpon>CubicClockForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IClock.cs" />
-    <Compile Include="IView.cs" />
+    <Compile Include="Model\IClock.cs" />
+    <Compile Include="Model\IClockEvents.cs" />
+    <Compile Include="View\IView.cs" />
+    <Compile Include="View\IViewEvents.cs" />
     <Compile Include="Presenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CubicClockForm.resx">
+    <EmbeddedResource Include="View\CubicClockForm.resx">
       <DependentUpon>CubicClockForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
