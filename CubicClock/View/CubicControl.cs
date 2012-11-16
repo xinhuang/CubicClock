@@ -38,7 +38,7 @@ namespace CubicClock.View
             base.OnPaint(e);
 
             int max = Max == 0 ? 1 : Max;
-            var blackRegion = new RectangleF(0, 0, (float)Value / max * Width, Height);
+            var blackRegion = new RectangleF(0, 0, (float) Value/max*Width, Height);
             blackRegion.Width = Math.Min(Width, blackRegion.Width);
             using (var blackBrush = new SolidBrush(Color.Black))
             {

@@ -7,6 +7,8 @@ namespace CubicClock.Model
     {
         private IClockEvents _presenter;
 
+        #region IClock Members
+
         public void Attach(IClockEvents presenter)
         {
             _presenter = presenter;
@@ -27,5 +29,7 @@ namespace CubicClock.Model
                                Update();
                        }).Start();
         }
+
+        #endregion
     }
 }

@@ -1,13 +1,14 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CubicClock.View
 {
     public partial class CubicClockForm : Form, IView
     {
-        private IViewEvents _presenter;
-        private Point _oldLocation;
         private bool _moving;
+        private Point _oldLocation;
+        private IViewEvents _presenter;
 
         public CubicClockForm()
         {
@@ -18,14 +19,24 @@ namespace CubicClock.View
             _secondCubic.Max = 60;
         }
 
+        #region IView Members
+
         public Presenter Presenter
         {
-            set { _presenter = value; Refresh(); }
+            set
+            {
+                _presenter = value;
+                Refresh();
+            }
         }
 
         public int Hour
         {
-            set { _hourCubic.Value = value; ; }
+            set
+            {
+                _hourCubic.Value = value;
+                ;
+            }
         }
 
         public int Minute
@@ -37,6 +48,8 @@ namespace CubicClock.View
         {
             set { _secondCubic.Value = value; }
         }
+
+        #endregion
 
         public override void Refresh()
         {
@@ -69,14 +82,14 @@ namespace CubicClock.View
         {
             base.OnMouseMove(e);
 
-            if (!_moving) 
+            if (!_moving)
                 return;
 
-            this.Left += e.Location.X - _oldLocation.X;
-            this.Top += e.Location.Y - _oldLocation.Y;
+            Left += e.Location.X - _oldLocation.X;
+            Top += e.Location.Y - _oldLocation.Y;
         }
 
-        private void OnExitToolStripMenuItemClick(object sender, System.EventArgs e)
+        private void OnExitToolStripMenuItemClick(object sender, EventArgs e)
         {
             _shortcutMenu.Hide();
             _presenter.OnExit();

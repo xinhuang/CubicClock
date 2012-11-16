@@ -41,6 +41,11 @@ namespace CubicClock
             _clock.Update();
         }
 
+        public void OnExit()
+        {
+            Environment.Exit(0);
+        }
+
         #endregion
 
         public void Attach(IView view)
@@ -48,11 +53,6 @@ namespace CubicClock
             _view = view;
             _view.Presenter = this;
             _clock.Start();
-        }
-
-        public void OnExit()
-        {
-            Environment.Exit(0);
         }
     }
 }

@@ -7,8 +7,8 @@ namespace CubicClockTest
     [TestClass]
     public class ClockUnitTest
     {
-        private Clock _sut;
         private readonly Mock<IClockEvents> _mockPresenter = new Mock<IClockEvents>();
+        private Clock _sut;
 
         [TestInitialize]
         public void SetUp()
