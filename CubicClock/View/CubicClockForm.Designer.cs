@@ -30,11 +30,11 @@
         {
             this._menu = new System.Windows.Forms.MenuStrip();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._topMostMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._secondCubic = new CubicClock.View.CubicControl();
             this._minuteCubic = new CubicClock.View.CubicControl();
             this._hourCubic = new CubicClock.View.CubicControl();
-            this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._topMostMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,24 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.OnExitToolStripMenuItemClick);
+            // 
+            // optionToolStripMenuItem
+            // 
+            this.optionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._topMostMenuItem});
+            this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
+            this.optionToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.optionToolStripMenuItem.Text = "&Option";
+            // 
+            // _topMostMenuItem
+            // 
+            this._topMostMenuItem.Checked = true;
+            this._topMostMenuItem.CheckOnClick = true;
+            this._topMostMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this._topMostMenuItem.Name = "_topMostMenuItem";
+            this._topMostMenuItem.Size = new System.Drawing.Size(152, 22);
+            this._topMostMenuItem.Text = "Top Most";
+            this._topMostMenuItem.CheckedChanged += new System.EventHandler(this.OnTopMostToolStripMenuItemClick);
             // 
             // _secondCubic
             // 
@@ -88,22 +106,6 @@
             this._hourCubic.TabIndex = 0;
             this._hourCubic.Value = 10;
             // 
-            // optionToolStripMenuItem
-            // 
-            this.optionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this._topMostMenuItem});
-            this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
-            this.optionToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.optionToolStripMenuItem.Text = "&Option";
-            // 
-            // _topMostMenuItem
-            // 
-            this._topMostMenuItem.CheckOnClick = true;
-            this._topMostMenuItem.Name = "_topMostMenuItem";
-            this._topMostMenuItem.Size = new System.Drawing.Size(152, 22);
-            this._topMostMenuItem.Text = "Top Most";
-            this._topMostMenuItem.CheckedChanged += new System.EventHandler(this.OnTopMostToolStripMenuItemClick);
-            // 
             // CubicClockForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,7 +118,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this._menu;
             this.Name = "CubicClockForm";
-            this.Text = "Form1";
+            this.Text = "Cubic Clock";
+            this.TopMost = true;
             this._menu.ResumeLayout(false);
             this._menu.PerformLayout();
             this.ResumeLayout(false);

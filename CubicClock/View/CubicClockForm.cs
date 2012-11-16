@@ -17,6 +17,8 @@ namespace CubicClock.View
             _hourCubic.Max = 24;
             _minuteCubic.Max = 60;
             _secondCubic.Max = 60;
+
+            _topMostMenuItem.Checked = TopMost;
         }
 
         #region IView Members
