@@ -13,11 +13,7 @@ namespace CubicClock.View
         public CubicClockForm()
         {
             InitializeComponent();
-
-            _hourCubic.Max = 24;
-            _minuteCubic.Max = 60;
-            _secondCubic.Max = 60;
-
+            
             _topMostMenuItem.Checked = TopMost;
         }
 
@@ -34,11 +30,7 @@ namespace CubicClock.View
 
         public int Hour
         {
-            set
-            {
-                _hourCubic.Value = value;
-                ;
-            }
+            set { _hourCubic.Value = value; }
         }
 
         public int Minute

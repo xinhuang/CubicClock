@@ -72,45 +72,51 @@
             this._topMostMenuItem.CheckOnClick = true;
             this._topMostMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this._topMostMenuItem.Name = "_topMostMenuItem";
-            this._topMostMenuItem.Size = new System.Drawing.Size(152, 22);
+            this._topMostMenuItem.Size = new System.Drawing.Size(125, 22);
             this._topMostMenuItem.Text = "Top Most";
             this._topMostMenuItem.CheckedChanged += new System.EventHandler(this.OnTopMostToolStripMenuItemClick);
             // 
             // _secondCubic
             // 
+            this._secondCubic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this._secondCubic.BackColor = System.Drawing.Color.LightGray;
-            this._secondCubic.Location = new System.Drawing.Point(33, 135);
-            this._secondCubic.Max = 0;
+            this._secondCubic.Location = new System.Drawing.Point(33, 139);
+            this._secondCubic.Max = 60;
             this._secondCubic.Name = "_secondCubic";
-            this._secondCubic.Size = new System.Drawing.Size(183, 45);
+            this._secondCubic.Size = new System.Drawing.Size(196, 47);
             this._secondCubic.TabIndex = 2;
+            this._secondCubic.TabStop = false;
             this._secondCubic.Value = 56;
             // 
             // _minuteCubic
             // 
+            this._minuteCubic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this._minuteCubic.BackColor = System.Drawing.Color.LightGray;
-            this._minuteCubic.Location = new System.Drawing.Point(33, 84);
-            this._minuteCubic.Max = 0;
+            this._minuteCubic.Location = new System.Drawing.Point(33, 88);
+            this._minuteCubic.Max = 60;
             this._minuteCubic.Name = "_minuteCubic";
-            this._minuteCubic.Size = new System.Drawing.Size(183, 45);
+            this._minuteCubic.Size = new System.Drawing.Size(196, 47);
             this._minuteCubic.TabIndex = 1;
+            this._minuteCubic.TabStop = false;
             this._minuteCubic.Value = 38;
             // 
             // _hourCubic
             // 
+            this._hourCubic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this._hourCubic.BackColor = System.Drawing.Color.LightGray;
-            this._hourCubic.Location = new System.Drawing.Point(33, 33);
+            this._hourCubic.Location = new System.Drawing.Point(33, 37);
             this._hourCubic.Max = 24;
             this._hourCubic.Name = "_hourCubic";
-            this._hourCubic.Size = new System.Drawing.Size(183, 45);
+            this._hourCubic.Size = new System.Drawing.Size(196, 47);
             this._hourCubic.TabIndex = 0;
+            this._hourCubic.TabStop = false;
             this._hourCubic.Value = 10;
             // 
             // CubicClockForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(271, 232);
+            this.ClientSize = new System.Drawing.Size(284, 243);
             this.Controls.Add(this._secondCubic);
             this.Controls.Add(this._minuteCubic);
             this.Controls.Add(this._hourCubic);

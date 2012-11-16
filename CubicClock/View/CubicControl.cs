@@ -14,10 +14,18 @@ namespace CubicClock.View
             InitializeComponent();
         }
 
-        [DefaultValue(60)]
-        public int Max { get; set; }
+        private int _max;
 
-        [DefaultValue(33)]
+        public int Max
+        {
+            get { return _max; }
+            set
+            {
+                _max = value; 
+                InvokeInvalidate();
+            }
+        }
+
         public int Value
         {
             get { return _value; }
@@ -26,11 +34,16 @@ namespace CubicClock.View
                 if (_value == value)
                     return;
                 _value = value;
-                if (InvokeRequired)
-                    Invoke(new Action(Invalidate));
-                else
-                    Invalidate();
+                InvokeInvalidate();
             }
+        }
+
+        private void InvokeInvalidate()
+        {
+            if (InvokeRequired)
+                Invoke(new Action(Invalidate));
+            else
+                Invalidate();
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -38,7 +51,7 @@ namespace CubicClock.View
             base.OnPaint(e);
 
             int max = Max == 0 ? 1 : Max;
-            var blackRegion = new RectangleF(0, 0, (float) Value/max*Width, Height);
+            var blackRegion = new RectangleF(0, 0, (float)Value / max * Width, Height);
             blackRegion.Width = Math.Min(Width, blackRegion.Width);
             using (var blackBrush = new SolidBrush(Color.Black))
             {
