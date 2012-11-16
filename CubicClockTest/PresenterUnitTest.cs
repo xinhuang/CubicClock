@@ -15,13 +15,12 @@ namespace CubicClockTest
         public void SetUp()
         {
             _presenter = new Presenter(_mockClock.Object);
+            _presenter.Attach(_mockView.Object);
         }
 
         [TestMethod]
         public void given_view_attached_should_set_presenter_of_view()
         {
-            _presenter.Attach(_mockView.Object);
-
             _mockView.VerifySet(o => o.Presenter = _presenter, Times.Once());
         }
 
@@ -31,6 +30,14 @@ namespace CubicClockTest
             _presenter.OnRefresh();
 
             _mockClock.Verify(o => o.Update(), Times.Once());
+        }
+
+        [TestMethod]
+        public void given_update_hour_should_update_hour_in_view()
+        {
+            _presenter.Hour = 12;
+
+            _mockView.VerifySet(o => o.Hour = 12, Times.Once());
         }
     }
 }
