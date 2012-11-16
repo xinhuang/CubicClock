@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this._shortcutMenu = new System.Windows.Forms.MenuStrip();
+            this._menu = new System.Windows.Forms.MenuStrip();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._secondCubic = new CubicClock.View.CubicControl();
             this._minuteCubic = new CubicClock.View.CubicControl();
             this._hourCubic = new CubicClock.View.CubicControl();
-            this._shortcutMenu.SuspendLayout();
+            this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._topMostMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._menu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // _shortcutMenu
+            // _menu
             // 
-            this._shortcutMenu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this._shortcutMenu.Dock = System.Windows.Forms.DockStyle.None;
-            this._shortcutMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this._shortcutMenu.Location = new System.Drawing.Point(0, 0);
-            this._shortcutMenu.Name = "_shortcutMenu";
-            this._shortcutMenu.Size = new System.Drawing.Size(137, 24);
-            this._shortcutMenu.TabIndex = 3;
-            this._shortcutMenu.Text = "_shortcutMenu";
-            this._shortcutMenu.Visible = false;
+            this._menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem,
+            this.optionToolStripMenuItem});
+            this._menu.Location = new System.Drawing.Point(0, 0);
+            this._menu.Name = "_menu";
+            this._menu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this._menu.Size = new System.Drawing.Size(271, 24);
+            this._menu.TabIndex = 3;
+            this._menu.Text = "_menu";
+            this._menu.Visible = false;
             // 
             // exitToolStripMenuItem
             // 
@@ -86,6 +88,22 @@
             this._hourCubic.TabIndex = 0;
             this._hourCubic.Value = 10;
             // 
+            // optionToolStripMenuItem
+            // 
+            this.optionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._topMostMenuItem});
+            this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
+            this.optionToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.optionToolStripMenuItem.Text = "&Option";
+            // 
+            // _topMostMenuItem
+            // 
+            this._topMostMenuItem.CheckOnClick = true;
+            this._topMostMenuItem.Name = "_topMostMenuItem";
+            this._topMostMenuItem.Size = new System.Drawing.Size(152, 22);
+            this._topMostMenuItem.Text = "Top Most";
+            this._topMostMenuItem.CheckedChanged += new System.EventHandler(this.OnTopMostToolStripMenuItemClick);
+            // 
             // CubicClockForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -94,13 +112,13 @@
             this.Controls.Add(this._secondCubic);
             this.Controls.Add(this._minuteCubic);
             this.Controls.Add(this._hourCubic);
-            this.Controls.Add(this._shortcutMenu);
+            this.Controls.Add(this._menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MainMenuStrip = this._shortcutMenu;
+            this.MainMenuStrip = this._menu;
             this.Name = "CubicClockForm";
             this.Text = "Form1";
-            this._shortcutMenu.ResumeLayout(false);
-            this._shortcutMenu.PerformLayout();
+            this._menu.ResumeLayout(false);
+            this._menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,8 +129,10 @@
         private CubicControl _hourCubic;
         private CubicControl _minuteCubic;
         private CubicControl _secondCubic;
-        private System.Windows.Forms.MenuStrip _shortcutMenu;
+        private System.Windows.Forms.MenuStrip _menu;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem optionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem _topMostMenuItem;
 
     }
 }

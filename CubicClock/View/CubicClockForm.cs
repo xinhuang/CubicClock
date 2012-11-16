@@ -64,7 +64,7 @@ namespace CubicClock.View
             _oldLocation = e.Location;
             _moving = true;
 
-            _shortcutMenu.Visible = false;
+            _menu.Visible = false;
         }
 
         protected override void OnMouseUp(MouseEventArgs e)
@@ -74,7 +74,7 @@ namespace CubicClock.View
 
             if (e.Button == MouseButtons.Right)
             {
-                _shortcutMenu.Visible = true;
+                _menu.Visible = true;
             }
         }
 
@@ -91,8 +91,14 @@ namespace CubicClock.View
 
         private void OnExitToolStripMenuItemClick(object sender, EventArgs e)
         {
-            _shortcutMenu.Hide();
+            _menu.Hide();
             _presenter.OnExit();
+        }
+
+        private void OnTopMostToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            _presenter.OnTopMostCheckChanged(_topMostMenuItem.Checked);
+            _menu.Visible = false;
         }
     }
 }

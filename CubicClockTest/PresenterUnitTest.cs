@@ -58,5 +58,13 @@ namespace CubicClockTest
 
             _mockView.VerifySet(o => o.Second = 44, Times.Once());
         }
+
+        [TestMethod]
+        public void given_top_most_checked_should_view_set_to_top_most()
+        {
+            _presenter.OnTopMostCheckChanged(true);
+
+            _mockView.VerifySet(o => o.TopMost = true, Times.Once());
+        }
     }
 }

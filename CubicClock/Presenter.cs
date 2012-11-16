@@ -46,6 +46,11 @@ namespace CubicClock
             Environment.Exit(0);
         }
 
+        public void OnTopMostCheckChanged(bool value)
+        {
+            _view.TopMost = value;
+        }
+
         #endregion
 
         public void Attach(IView view)

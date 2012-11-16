@@ -6,5 +6,6 @@ namespace CubicClock.View
         int Hour { set; }
         int Minute { set; }
         int Second { set; }
+        bool TopMost { set; }
     }
 }
