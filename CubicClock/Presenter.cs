@@ -46,6 +46,7 @@ namespace CubicClock
         {
             _view = view;
             _view.Presenter = this;
+            _clock.Start();
         }
     }
 }

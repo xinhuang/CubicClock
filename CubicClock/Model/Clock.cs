@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 
 namespace CubicClock.Model
 {
@@ -15,6 +16,11 @@ namespace CubicClock.Model
         {
             _presenter.Hour = DateTime.Now.Hour;
             _presenter.Minute = DateTime.Now.Minute;
+        }
+
+        public void Start()
+        {
+            new Thread(Update).Start();
         }
     }
 }

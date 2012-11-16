@@ -4,5 +4,6 @@ namespace CubicClock.Model
     {
         void Attach(IClockEvents presenter);
         void Update();
+        void Start();
     }
 }

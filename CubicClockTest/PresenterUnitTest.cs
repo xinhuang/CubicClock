@@ -21,9 +21,10 @@ namespace CubicClockTest
         }
 
         [TestMethod]
-        public void given_view_attached_should_set_presenter_of_view()
+        public void given_view_attached_should_set_presenter_of_view_and_start_clock()
         {
             _mockView.VerifySet(o => o.Presenter = _presenter, Times.Once());
+            _mockClock.Verify(o => o.Start(), Times.Once());
         }
 
         [TestMethod]
