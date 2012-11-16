@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace CubicClock
 {
-    public partial class Form1 : Form
+    public partial class CubicClockForm : Form
     {
-        public Form1()
+        public CubicClockForm()
         {
             InitializeComponent();
         }
