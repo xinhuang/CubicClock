@@ -42,11 +42,10 @@
             // _menu
             // 
             this._menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem,
-            this.optionToolStripMenuItem});
+            this.optionToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this._menu.Location = new System.Drawing.Point(0, 0);
             this._menu.Name = "_menu";
-            this._menu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._menu.Size = new System.Drawing.Size(284, 24);
             this._menu.TabIndex = 3;
             this._menu.Text = "_menu";
@@ -147,7 +146,6 @@
             this.Name = "CubicClockForm";
             this.ShowInTaskbar = false;
             this.Text = "Cubic Clock";
-            this.TopMost = true;
             this._menu.ResumeLayout(false);
             this._menu.PerformLayout();
             this.ResumeLayout(false);
