@@ -24,13 +24,13 @@ namespace CubicClock.Model
         public void Start()
         {
             new Thread(() =>
-                       {
-                           while (true)
-                           {
-                               Thread.Sleep(1000);
-                               Update();
-                           }
-                       }).Start();
+                        {
+                            while (true)
+                            {
+                                Thread.Sleep(1000);
+                                Update();
+                            }
+                        }) { IsBackground = true }.Start();
         }
 
         #endregion
