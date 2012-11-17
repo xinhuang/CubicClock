@@ -7,5 +7,6 @@ namespace CubicClock.View
         int Minute { set; }
         int Second { set; }
         bool TopMost { set; }
+        bool ShowInTaskBar { set; }
     }
 }

@@ -5,5 +5,6 @@ namespace CubicClock.View
         void OnRefresh();
         void OnExit();
         void OnTopMostCheckChanged(bool value);
+        void OnShowInTaskBarChanged(bool value);
     }
 }

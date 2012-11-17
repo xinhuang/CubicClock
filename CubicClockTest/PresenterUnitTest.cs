@@ -66,5 +66,13 @@ namespace CubicClockTest
 
             _mockView.VerifySet(o => o.TopMost = true, Times.Once());
         }
+
+        [TestMethod]
+        public void given_hide_in_task_bar_should_view_show_in_task_bar_be_set_to_false()
+        {
+            _presenter.OnShowInTaskBarChanged(false);
+
+            _mockView.VerifySet(o => o.ShowInTaskBar = false, Times.Once());
+        }
     }
 }

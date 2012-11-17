@@ -59,5 +59,10 @@ namespace CubicClock
             _view.Presenter = this;
             _clock.Start();
         }
+
+        public void OnShowInTaskBarChanged(bool value)
+        {
+            _view.ShowInTaskBar = value;
+        }
     }
 }

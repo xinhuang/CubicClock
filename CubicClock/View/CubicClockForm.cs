@@ -15,6 +15,7 @@ namespace CubicClock.View
             InitializeComponent();
             
             _topMostMenuItem.Checked = TopMost;
+            _showInTaskBarMenuItem.Checked = ShowInTaskbar;
         }
 
         #region IView Members
@@ -41,6 +42,11 @@ namespace CubicClock.View
         public int Second
         {
             set { _secondCubic.Value = value; }
+        }
+
+        public bool ShowInTaskBar
+        {
+            set { ShowInTaskbar = value; }
         }
 
         #endregion
@@ -108,6 +114,11 @@ namespace CubicClock.View
         private void OnTimeCubicMouseMove(object sender, MouseEventArgs e)
         {
             OnMouseMove(e);
+        }
+
+        private void OnShowInTaskBarMenuItemClick(object sender, EventArgs e)
+        {
+            _presenter.OnShowInTaskBarChanged(_showInTaskBarMenuItem.Checked);
         }
     }
 }
