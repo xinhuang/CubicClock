@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this._menu = new System.Windows.Forms.MenuStrip();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._topMostMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._showInTaskBarMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._secondCubic = new CubicClock.View.CubicControl();
             this._minuteCubic = new CubicClock.View.CubicControl();
             this._hourCubic = new CubicClock.View.CubicControl();
@@ -42,22 +42,14 @@
             // _menu
             // 
             this._menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem,
-            this.optionToolStripMenuItem});
+            this.optionToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this._menu.Location = new System.Drawing.Point(0, 0);
             this._menu.Name = "_menu";
-            this._menu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._menu.Size = new System.Drawing.Size(284, 24);
             this._menu.TabIndex = 3;
             this._menu.Text = "_menu";
             this._menu.Visible = false;
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.exitToolStripMenuItem.Text = "E&xit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.OnExitToolStripMenuItemClick);
             // 
             // optionToolStripMenuItem
             // 
@@ -70,9 +62,7 @@
             // 
             // _topMostMenuItem
             // 
-            this._topMostMenuItem.Checked = true;
             this._topMostMenuItem.CheckOnClick = true;
-            this._topMostMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this._topMostMenuItem.Name = "_topMostMenuItem";
             this._topMostMenuItem.Size = new System.Drawing.Size(163, 22);
             this._topMostMenuItem.Text = "Top Most";
@@ -80,13 +70,18 @@
             // 
             // _showInTaskBarMenuItem
             // 
-            this._showInTaskBarMenuItem.Checked = true;
             this._showInTaskBarMenuItem.CheckOnClick = true;
-            this._showInTaskBarMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this._showInTaskBarMenuItem.Name = "_showInTaskBarMenuItem";
             this._showInTaskBarMenuItem.Size = new System.Drawing.Size(163, 22);
             this._showInTaskBarMenuItem.Text = "Show In Task Bar";
             this._showInTaskBarMenuItem.Click += new System.EventHandler(this.OnShowInTaskBarMenuItemClick);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.OnExitToolStripMenuItemClick);
             // 
             // _secondCubic
             // 
@@ -147,7 +142,6 @@
             this.Name = "CubicClockForm";
             this.ShowInTaskbar = false;
             this.Text = "Cubic Clock";
-            this.TopMost = true;
             this._menu.ResumeLayout(false);
             this._menu.PerformLayout();
             this.ResumeLayout(false);
